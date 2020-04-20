@@ -1,2 +1,2 @@
 # training
-Training
+created for learning
