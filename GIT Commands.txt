@@ -79,6 +79,10 @@ git push origin firstbranch
 --To push the master to repo
 git push origin master
 
+--To revert the commit performed to a previous commit
+git log --(copy the first 8 letters of the hash of the commit that you want to go back to)
+git checkout <first 8 letters of the commit to revert> filename
+
 
 
 
