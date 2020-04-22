@@ -1,0 +1,85 @@
+-- To configure your global username
+git config --global user.name "Sumeshraj Mohan"
+
+--To configure your global email
+git config --global user.email "sumeshraj.mohan@legatohealth.com"
+
+-- To open git bash on a folder
+go to folder and right click and select "Git bash here"
+
+
+--To initialize the git in a windows folder
+git init -- .git folder gets created with all sub folders
+
+--To add remote repository
+git remote add origin "https://github.com/sumeshraj4u/training.git"
+
+--To fetch all files from central repo to local repo
+git pull origin master
+
+--To see the files in the index/intermediate staging layer
+git status --(new untracked files will be in red. modified files will be in green color)
+
+--To add the files to the index/intermediate staging layer
+git add filename
+
+--To commit the file
+git commit -m "comments for commit" --(all the files in green in status will be committed)
+
+--To add multiple files to index
+git add -A
+
+--To commit all files in index at one go
+git commit -a -m "committing all at once"
+
+--To see the logs of commit and hash associated with it
+git log
+
+--To create branch from master branch
+git branch firstbranch
+
+--To move to the firstbranch from master
+git checkout firstbranch --(now your current directory will point to firstbranch)
+
+-- If you add a file while in firstbranch, that file will be visible only that branch
+
+--To merge all files from firstbranch to master, first checkout to master branch and then
+git merge firstbranch
+
+--you can use ls to see the list of files in a branch
+
+--if the file is already in place in the index, and you have modified the file, you can exclude git add and commit by -a extension
+git commit -a -m "committing without git add using -a extension for modifed files"
+
+--Rebase vs Merge
+https://medium.com/datadriveninvestor/git-rebase-vs-merge-cc5199edd77c
+
+--To rebase the firstbranch to master, from master location enter
+git rebase firstbranch
+
+--Steps to generate and save the SSH key in repo (which is needed to push files to central repository)
+1. click on clone or download in repo. choose clone with SSH.
+2. enter in bash :ssh-keygen 
+3. if asked to overwrite, give 'y'
+4. your public will get saved in a folder.
+5. cat filelocation\filename to open the file
+6. copy the key
+7. in central repo, right-top, click the drop down to select Settings
+8. select SSH and GPG keys
+9. click new SSH key. Give a name and paste the SSH key generated in bash
+10.SSH key will be in black color until verified.
+11.in order to verify the SSH account type the command in bash
+12.ssh -T git@github.com
+13.Will get a message saying succesfully authenticated
+14.SSH key will turn to green color in repo
+
+--To push the firstbranch to repo
+git push origin firstbranch
+
+--To push the master to repo
+git push origin master
+
+
+
+
+
